@@ -1,0 +1,970 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    line-height: 1.8;
+    font-family: "Lato", sans-serif;
+    color: #a3a3a3;
+}
+@font-face{
+    font-family: Britania;
+    src:url(font/Britania.otf);
+}
+@font-face{
+    font-family: sugo;
+    src:url(font/sugo.ttf);
+}
+@font-face{
+    font-family: sherila;
+    src:url(font/Sherilla.ttf);
+}
+@font-face{
+    font-family: famosa;
+    src:url(font/Famosa.otf);
+}
+@font-face{
+    font-family: qanora;
+    src:url(font/qanora.ttf);
+}
+
+
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+
+.prev-slide, .next-slide {
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev-slide {
+    left: 10px;
+}
+
+.next-slide {
+    right: 10px;
+}
+
+
+
+
+/* Background video & Nav section */
+section{
+    width: 100%;
+    box-sizing: border-box;
+}
+.contw-sdf{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.dso-cd {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5% 2% 2% 10%;
+}
+
+nav a img {
+   max-height: 150px;
+   max-width: 100px;
+}
+
+.as-as,
+ul,
+li,
+a {
+    font-size: 15px;
+    font-family: sugo;
+    font-weight: bold;
+    letter-spacing: .1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f4f4f4;
+}
+
+.as-as,
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ssaa {
+    font-size: large;
+}
+
+#scroll-icon {
+    position: absolute;
+    top: 88%;
+    left: 50%; /* Change from right to left */
+    transform: translateX(-50%); /* Add this line */
+    z-index: 1000;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+#scroll-icon:hover {
+    opacity: 1;
+}
+
+.main-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .dso-cd video {
+        width: 177.77777770vh;
+        height: 100vh;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .dso-cd video {
+        width: 100vw;
+        height: 56.25vw;
+    }
+}
+
+/* Mobile Nav */
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0;
+    display: none; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .closebtn{
+    padding-left: 15px;
+    padding-top: 5px;
+  }
+  .owe-cwccd{
+    text-align: center; 
+}
+.owe-cwccd a{
+    width: 100%;
+    padding: 30px 0;
+    border-top: solid 1px #818181;
+}
+.bob-s{
+    border-bottom: solid 1px #818181;
+}
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .as-as a:hover{
+    color: #d6d3d3;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 36px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  .openbtn{
+    margin-right: 2%;
+    margin-top: -10%;
+    background-color: transparent;
+    border: none;
+    display: none;
+    font-size: 25px;
+    color: #fff;
+  }
+  .active{
+    color: #6c6c6c;
+}
+.sidenav .active {
+    color: #f4f4f4;
+}
+
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+
+/* Video Showcase content */
+
+
+.aspo-as, .dldc-ca {
+    padding: 100px 8%;
+    background-color: #fbf7f4;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.sd-ad h1{
+    font-family: Britania;
+    font-weight: 100;
+    color: #c4ab8a;
+    text-align: center;
+}
+.sd-ad p{
+    font-family:famosa;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns */
+    /* Three rows */
+    gap: 6px;
+    /* Adjust the gap value as needed */
+  
+    justify-content: center;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    /* 16:9 aspect ratio (height: 9/16 = 0.5625) */
+}
+
+.play-button {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.play-button img {
+    width: 100%;
+    height: auto;
+   
+    /* Adjust the max-height as needed */
+    display: block;
+}
+
+.fa-play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    padding: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 10);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay iframe {
+    width: 90vw; /* 70% of the viewport width */
+    height: 95vh; /* 90% of the viewport height */
+  
+}
+
+.overlay .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #fff;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+/* Photo Showcase content */
+
+.odco-dsc{
+    font-family: qanora;
+    color: #716e6e;
+    font-size: 10px;
+    text-transform:capitalize;
+}
+
+.asd-cm img{
+    max-width: 100%;
+    height: auto;
+}
+ 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.grid-item a {
+    display: block;
+    overflow: hidden;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Zoom in by 10% */
+    opacity: 0.8; /* Reduce opacity to 80% */
+}
+.hover-fde{
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 0;
+    width: 95%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Black with 70% transparency */
+    transform: translateY(-50%); /* Adjust for centering */
+    transition: height 0.3s ease;
+}
+.dskmc{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    display: flex !important;
+    opacity: 0;
+}
+.grid-item:hover .hover-efd {
+    height: 100%; /* Reveal the overlay from center to top and bottom */
+}
+.grid-item:hover .hover-fde {
+    height: 100%; /* Reveal the overlay from center to top and bottom */
+}
+.grid-item:hover .dskmc{
+    opacity: 1;
+}
+.dskmc{
+    display: none;
+}
+
+
+  /* Whats my client says*/
+
+/* Testimonial Section Styles */
+
+
+.client-says-section{
+    background-color: #fff;
+    box-sizing: border-box;
+
+}
+.dc-csdc h6{
+    line-height: 1.8;
+    text-align: center;
+}
+.dc-csdc h3{
+    font-family: Britania;
+    font-weight: 100;
+    color: #c4ab8a;
+}
+.dc-csdc span{
+    font-family: famosa;
+    font-size: 12px;
+    font-weight: bold;
+}
+.dc-csdc h3, span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-quote-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.testimonials-slider{
+    padding-top: 50px ;
+}
+.testimonial-item {
+    display: none;
+    text-align: center;
+    width: 100%; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+}
+.testimonial-item p{
+    font-family: famosa;
+}
+
+.testimonial-item.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.client-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.client-details h3 {
+    font-family: Britania;
+    font-weight: 100;
+    color: rgb(196, 171, 138);
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+.client-says-section p{
+    line-height: 1.8;
+}
+
+.fa-arrow-right{
+    font-size: 20px;
+    color: #1a2438;
+}
+.fa-arrow-right:hover{
+    cursor: pointer;
+}   
+.fa-quote-left{
+    font-size: 40px;
+    color: #888;
+}
+.bottom-d{
+    margin-top: 20px;
+}
+.arrow-container {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 150px ;
+    align-items: center; /* Adjust the width as needed */
+  }
+  
+  .arrow-wrapper {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .arrow-text {
+    font-family: famosa;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, top 0.5s ease-in-out; /* Add transitions for opacity and top */
+}
+
+.arrow-wrapper:hover .arrow-text {
+    opacity: 1;
+    top: 100%;
+    transition: opacity 0.3s, top 0.5s ease-in-out; /* Add transitions for opacity and top */
+}
+
+  
+.fa-arrow-right {
+    font-size: 24px;
+    color: #1a2438;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Your existing CSS styles */
+
+/* Add any additional styles as needed */
+
+
+
+/*Footer*/
+
+.owcw-wdc{
+    background-color: #1a2438;
+
+}
+.oqwd-scc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.oqwd-scc img{
+    height: 80px;
+}
+.kas-asc{
+    align-items: center;
+    justify-content: center;
+}
+.kas-asc h3{
+    font-family: famosa;
+    color: #fbf7f4;
+    font-weight: 100;
+    font-size:medium;
+    line-height: 35px;
+}
+.oijc-cw{
+    margin-top: 50px;
+}
+.oijc-cw p{
+    font-family: famosa;
+    line-height: 1.8;
+    color: #fbf7f4;
+}
+.dldc-ca{
+    align-items: center;
+    text-align: center;
+}
+.fa-instagram{
+    font-size: 30px;
+    color: #111;
+}
+.ok-cs{
+    background-color:#fff ;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+
+
+/* Photography Page style */
+
+
+.masn-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+.okjn {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.osiddwd{
+    width: 100%;
+}
+
+
+/* Parallax Effect 
+
+.parallax-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.parallax-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}*/
+
+.parallax {
+    background-image: url("img/PHOTO SHOWCASE.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+
+/* Contact page */
+fieldset{
+    max-width: 100%;
+    border: 0;
+
+}
+.con-qwd{
+    margin-top: 50px;
+    border: none;
+}
+.name-cadc{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+.name-cadc2{
+    gap: 10px ;
+}
+.name-cadc p{
+    font-size: 15px;
+}
+.name-cadc span{
+    font-size: 17px;
+}
+.indsdc{
+    width: 100%;
+    background-color: #fafafa;
+    border: 1px solid #a9a9a9;
+    box-sizing: border-box;
+    color: #000;
+    height: 46px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    margin: 0 0 18px;
+}
+.nasd-asd{
+    width: 50%;
+}
+.sdc-dscn{
+    padding-bottom: 4px;
+}
+.pksx-x{
+    padding: 0 7%;
+}
+.sal-sac{
+    min-height: 100px;
+    font-size: 100%;
+    margin: 0;
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+    height: 50px;
+    margin: 0 0 18px;
+}
+.sub-mit{
+    border: 0;
+    cursor: pointer;
+    background-color: #272727;
+    color: #fff;
+    padding: 14px 35px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.sub-mit:hover{
+    background-color: #595858;
+}
+.lsc-sc {
+    margin: 0 0 4px;
+    width: fit-content;
+    align-items: center;
+    background-color: #ce2c30;
+    color: #fff;
+    column-gap: 10px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 10px;
+}
+.sdmsd-sdc{
+    display: none;
+}
+
+/* we-do page */
+.wedo-qd h1{
+    font-family: Britania;
+    font-weight: 100;
+    color: #c4ab8a;
+    text-align: center;
+}
+.para-img{
+    width: 100%;
+}
+
+.wedo-qd p{
+    font-family: famosa;
+}
+.wedo-qd h1{
+    font-family: bri;
+}
+
+.flex-container {
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    
+}
+
+.image-container,
+.text-container {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625 or 56.25%) */
+}
+
+.img-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#my-img{
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+#slider{
+    position: relative;
+    -webkit-appearance: none;
+    width: calc( 100% + 40px);
+    height: 100%;
+    margin-left: -20px;
+    background-color: transparent;
+    outline: none;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    background: url("img/slider-icon.svg"), rgba(255, 255, 255, 0.3);
+    background-size: contain;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.text-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+
+/* Kishore */
+
+.macin-sdc{
+    align-items: center;
+    justify-content: center;
+}
+.macin-sdc img{
+    max-width: 100%;
+    margin-bottom: -7px;
+}
+.sherila{
+    font-family: sherila;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffdb6c;
+}
+.oc-dscls p{
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: .015em;
+    color: #a3a3a3;
+}
+.sdjno{
+    padding-bottom: 30px;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+    }
+
+    .image-container,
+    .text-container {
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+/* Media Query */
+
+@media (max-width: 1000px) {
+    .aspo-as {
+        padding-left: 5%;
+        padding-right: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .asd-cm {
+        max-width: 100%;
+        height: auto;
+    }
+    .dldc-ca {
+        
+        padding-right: 4%;
+    }
+    
+   
+}
+@media(max-width:756px){
+    .as-as{
+        display: none;
+    }
+    .openbtn{
+        display: block;
+        
+    }
+    .sidenav{
+        display: block;
+    }
+   
+}
+
+@media (max-width: 689px) {
+    .fa-play{
+        font-size: 1rem;
+    }
+}
+
+/* Media query for larger screens */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+    }
+}
+
+/* Media query for even larger screens */
+
+@media(max-width:640px){
+    .oqwd-scc{
+        flex-direction: column;
+    }
+    .oqwd-scc img{
+        width: 100%;
+        height: 200px;
+        margin-top: -80px;
+    }
+    .ok-cs{
+        margin-top: 50px;
+    }
+    .kas-asc{
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 540px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* One column for even larger screens */
+    }
+    .testimonial-item, .sd-ad p, .dldc-ca, .oc-dscls p{
+        text-align: justify;
+    }
+    nav a img{
+        margin-top: 50%;
+        margin-left: 20%;
+        max-width: 70px;
+    }
+    .openbtn{
+        margin-top: -25%;
+    }
+    
+    .pksx-x{
+        padding: 0;
+    }
+    .sherila{
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width: 250px){
+    .sherila{
+        font-size: 15px;
+    }
+}
+
+

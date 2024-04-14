@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Google Icon-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100,0,0" />
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Licorice&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rakkas&family=Yeseva+One&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bellefair&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rakkas&family=Sacramento&family=Yeseva+One&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bellefair&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rakkas&family=Sacramento&family=Yeseva+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+
+<body>
+    
+    <!--Background Video & Nav Section-->
+    <section class="dso-cd">
+        <video class="main-video" autoplay loop muted plays-inline id="backgroundVideo" style="width: 100%;">
+            <source src="img/head.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <a href="index.html"><img src="img/WH.png"></a>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="owe-cwccd"><a href="index.html">Flims</a>
+                <a href="photography.html">Photography</a>
+                <a href="we-do.html">We do</a>
+                <a href="contact.html">Contact</a>
+                <a href="travel.html" class="bob-s">Travel</a>
+                </div>  
+            </div>
+              
+              <!-- Use any element to open the sidenav -->
+              <button class="openbtn" onclick="openNav()">&#9776;</button> 
+              
+              <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+            <div class="as-as">
+                <ul>
+                    <li><a href="index.html">Flims</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="we-do.html">we do</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="travel.html">Travel</a></li>
+                </ul>
+           
+                  
+            </div>
+        </nav>
+        <a href="#" id="scroll-icon"><i class="fa-solid fa-chevron-down"></i></a>
+        
+    </section>
+    
+    <!--Video Showcase Content-->
+    <section id="scrolls" class="aspo-as">
+        <div class="contw-sdf">
+        <div class="sd-ad">
+            <h1>Your Love, Our Frames, Beautiful Photographs</h1>
+            <p>Welcome to Frame of Boy, where we capture the beauty, emotion, and magic of your special day. As
+                professional wedding photographers, we believe that your wedding is more than just a day, it's a
+                celebration of your love story. Allow us to take you on a visual journey through the most important day
+                of your life, and to create a lasting legacy of your love.</p>
+        </div>
+        <div class="video-grid">
+            <div class="video-container">
+                <div class="play-button" onclick="playVideo(1)" data-index="1">
+                    <img src="img/THUMBNAIL/R&M1.jpg" alt="Play Video">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="embedded-video" id="embeddedVideo1"></div>
+            </div>
+            <div class="video-container">
+                <div class="play-button" onclick="playVideo(2)" data-index="2">
+                    <img src="img/THUMBNAIL/P&M2.jpg" alt="Play Video">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="embedded-video" id="embeddedVideo2"></div>
+            </div>
+            <div class="video-container">
+                <div class="play-button" onclick="playVideo(3)" data-index="3">
+                    <img src="img/THUMBNAIL/V&S WD3.jpg" alt="Play Video">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="embedded-video" id="embeddedVideo2"></div>
+            </div>
+            <div class="video-container">
+                <div class="play-button" onclick="playVideo(4)" data-index="4">
+                    <img src="img/THUMBNAIL/Y&P4.jpg" alt="Play Video">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="embedded-video" id="embeddedVideo2"></div>
+            </div>
+            <div class="video-container">
+                <div class="play-button" onclick="playVideo(5)" data-index="5">
+                    <img src="img/THUMBNAIL/V&S5.jpg" alt="Play Video">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="embedded-video" id="embeddedVideo2"></div>
+            </div>
+            <div class="video-container">
+                <div class="play-button" onclick="playVideo(6)" data-index="6">
+                    <img src="img/THUMBNAIL/K&L6.jpg" alt="Play Video">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <div class="embedded-video" id="embeddedVideo2"></div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    
+    
+
+   <!-- Photo Showcase Content -->
+   <div class="parallax">
+    <div style="display: flex; align-items: center; justify-content: center;">
+    <h3>Photo Showcase</h3>
+</div>
+   </div>
+
+   
+   <section class="sdccm dldc-ca">
+    <div class="contw-sdf">
+    <div class="grid-container">
+      <div class="grid-item">
+        <a href="Kishore-img.html"><img src="img/THUMBNAIL/K&H.jpg" alt="Showcase 1">
+        <div class="hover-fde"></div>
+        
+        <div class="dskmc"><span>read more</span><span class="material-symbols-outlined">trending_flat</span></div>
+    </a>
+      </div>
+      <div class="grid-item">
+        <a href="ranjith weds.html"><img src="img/THUMBNAIL/R&M.jpg" alt="Showcase 2">
+        
+        
+        <div class="hover-fde"></div>
+      
+        <div class="dskmc"><span>read more</span><span class="material-symbols-outlined">trending_flat</span></div>
+    </a>
+      </div>
+      <div class="grid-item">
+        <a href="saran nivisha.html"><img src="img/THUMBNAIL/S&N.jpg" alt="Showcase 3">
+        <div class="hover-fde"></div>
+       
+        <div class="dskmc"><span>read more</span><span class="material-symbols-outlined">trending_flat</span></div>
+    </a>
+      </div>
+      <div class="grid-item">
+        <a href="amuthaval.html"><img src="img/THUMBNAIL/amuthval.jpg" alt="Showcase 4">
+        <div class="hover-fde"></div>
+       
+        <div class="dskmc"><span>read more</span><span class="material-symbols-outlined">trending_flat</span></div>
+    </a>
+      </div>
+      <div class="grid-item">
+        <a href="aishu.html"><img src="img/THUMBNAIL/aishu.jpg" alt="Showcase 5">
+        <div class="hover-fde"></div>
+       
+        <div class="dskmc"><span>read more</span><span class="material-symbols-outlined">trending_flat</span></div>
+    </a>
+      </div>
+      <div class="grid-item">
+        <a href="ranjith.html"><img src="img/THUMBNAIL/ranjith.jpg" alt="Showcase 6">
+        <div class="hover-fde"></div>
+      
+        <div class="dskmc"><span>read more</span><span class="material-symbols-outlined">trending_flat</span></div>
+    </a>
+      </div>
+    </div>
+    </div>
+  </section>
+  
+  <!--Whats my client says-->
+   <!-- What my Client Says Section -->
+<!-- What my Client Says Section -->
+<!-- What my Client Says Section -->
+<!-- What my Client Says Section -->
+<section class="client-says-section aspo-as dldc-ca ">
+    <div class="contw-sdf">
+        <div class="dc-csdc">
+            <h3>What our client says</h3>
+            <span>At the end of the day, people won’t remember what you said or did, they will remember how you made them feel.</span>
+        </div>
+        <div class="testimonials-slider">
+            <i class="fa-solid fa-quote-left top-g"></i>
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item active">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis quidem facere laudantium assumenda sed, modi nisi minima officiis debitis. Molestias distinctio a eveniet eaque dolore fugiat blanditiis culpa quasi dicta corrupti, assumenda dolor ab hic possimus laboriosam aut suscipit!</p>
+                <div class="client-info">
+                    <div class="client-details">
+                        <h3>Kishore & Harini</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis quidem facere laudantium assumenda sed, modi nisi minima officiis debitis. Molestias distinctio a eveniet eaque dolore fugiat blanditiis culpa quasi dicta corrupti, assumenda dolor ab hic possimus laboriosam aut suscipit!</p>
+                <div class="client-info">
+                    <div class="client-details">
+                        <h3>Kishore & Harini</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis quidem facere laudantium assumenda sed, modi nisi minima officiis debitis. Molestias distinctio a eveniet eaque dolore fugiat blanditiis culpa quasi dicta corrupti, assumenda dolor ab hic possimus laboriosam aut suscipit!</p>
+                <div class="client-info">
+                    <div class="client-details">
+                        <h3>Kishore & Harini</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis quidem facere laudantium assumenda sed, modi nisi minima officiis debitis. Molestias distinctio a eveniet eaque dolore fugiat blanditiis culpa quasi dicta corrupti, assumenda dolor ab hic possimus laboriosam aut suscipit!</p>
+                <div class="client-info">
+                    <div class="client-details">
+                        <h3>Kishore & Harini</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis quidem facere laudantium assumenda sed, modi nisi minima officiis debitis. Molestias distinctio a eveniet eaque dolore fugiat blanditiis culpa quasi dicta corrupti, assumenda dolor ab hic possimus laboriosam aut suscipit!</p>
+                <div class="client-info">
+                    <div class="client-details">
+                        <h3>Kishore & Harini</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quis quidem facere laudantium assumenda sed, modi nisi minima officiis debitis. Molestias distinctio a eveniet eaque dolore fugiat blanditiis culpa quasi dicta corrupti, assumenda dolor ab hic possimus laboriosam aut suscipit!</p>
+                <div class="client-info">
+                    <div class="client-details">
+                        <h3>Kishore & Harini</h3>
+                    </div>
+                </div>
+            </div>
+
+            <i class="fa-solid fa-quote-left fa-rotate-180 bottom-d"></i>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <div class="arrow-container">
+            <div class="arrow-wrapper" id="prevText" onclick="prevTestimonial()" onmouseover="showPrevText()" onmouseout="hideText()">
+              <i class="fa-solid fa-arrow-right arrow prev fa-rotate-180"></i>
+              <div class="arrow-text">Prev</div>
+            </div>
+            <div class="arrow-wrapper" id="nextText" onclick="nextTestimonial()" onmouseover="showPrevText()" onmouseout="hideText()">
+                <i class="fa-solid fa-arrow-right arrow next"></i>
+                <div class="arrow-text">Next</div>
+            </div>
+            
+          </div>
+    </div>
+</section>
+
+
+
+
+  <!--Footer section-->
+    
+    <footer class="owcw-wdc aspo-as dldc-ca">
+        <div class="contw-sdf">
+        <div class="oqwd-scc">
+            <img src="img/FOB FRONT new.png">
+            <a href="#" class="ok-cs"><i class="fa-brands fa-instagram"></i></a>
+            <div class="kas-asc">
+                <h3 class="cao-dca">kdsocj@gmail.com</h3>
+                <h3 class="cao-dca">Phone : 3928237938</h3>
+            </div>
+        </div>
+
+        <div class="oijc-cw">
+            <p class="cao-dca">corrupti, corporis veritatis similique incidunt impedit nostrum delectus minus? Mollitia ratione accusamus, dolor iusto dignissimos fugit accusantium cupiditate facilis in qui? Qui ipsam delectus quas sequi! Modi, excepturi fuga odio ea repellat hic? Cum explicabo deleniti odio maxime distinctio!</p>
+        </div>
+        </div>
+    </footer>
+
+<!--Embeded video overlay-->
+    <div class="overlay">
+        <div class="close-btn" onclick="closeOverlay()">&times;</div>
+        <iframe frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    
+  
+    <script src="main.js"></script>
+    
+</body>
+
+</html>

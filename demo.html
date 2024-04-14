@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial Slider</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .testimonial-slider {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonial {
+  display: none;
+  text-align: center;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.testimonial p {
+  font-size: 18px;
+}
+
+.testimonial h3 {
+  margin-top: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.arrow.prev {
+  left: 0;
+}
+
+.arrow.next {
+  right: 0;
+}
+
+  </style>
+</head>
+<body>
+
+<section class="testimonial-slider">
+  <div class="testimonial">
+    <p>Testimonial 1 content goes here.</p>
+    <h3>Client 1</h3>
+  </div>
+  <div class="testimonial">
+    <p>Testimonial 2 content goes here.</p>
+    <h3>Client 2</h3>
+  </div>
+  <!-- Add more testimonials as needed -->
+  
+  <div class="arrow prev"></div>
+  <div class="arrow next"></div>
+</section>
+
+<script>
+    const testimonials = document.querySelectorAll('.testimonial');
+let currentSlide = 0;
+
+function showSlide(index) {
+  testimonials.forEach((slide) => {
+    slide.classList.remove('active');
+  });
+  testimonials[index].classList.add('active');
+}
+
+function showNextSlide() {
+  currentSlide = (currentSlide + 1) % testimonials.length;
+  showSlide(currentSlide);
+}
+
+function showPrevSlide() {
+  currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+  showSlide(currentSlide);
+}
+
+document.querySelector('.arrow.next').addEventListener('click', showNextSlide);
+document.querySelector('.arrow.prev').addEventListener('click', showPrevSlide);
+
+// Initially show the first slide
+showSlide(currentSlide);
+
+</script>
+</body>
+</html>
