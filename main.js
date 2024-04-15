@@ -10,19 +10,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
         backgroundVideo.style.transform = 'translate3d(0, ' + yPos * speed + 'px, 0)';
     });
-
-    backgroundVideo.play();
     
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    var backgroundVideo = document.getElementById('backgroundVideo');
+    
+    // Function to play or pause the video when clicked
+    backgroundVideo.addEventListener('click', function() {
+        if (backgroundVideo.paused) {
+            backgroundVideo.play();
+        } else {
+            backgroundVideo.pause();
+        }
+    });
+
+    // Pause the video when the page is scrolled
+    window.addEventListener('scroll', function () {
+        backgroundVideo.pause();
+    });
+
+    // Function to handle the scroll icon click
     var scrollIcon = document.getElementById('scroll-icon');
     scrollIcon.addEventListener('click', function(event) {
         event.preventDefault();
         var target = document.getElementById('scrolls');
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+
+    // Add your other event listeners and functions here...
+
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
