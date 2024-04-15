@@ -2,7 +2,7 @@
  
  // Your JavaScript code (script.js)
 
-document.addEventListener('DOMContentLoaded', function () {
+ document.addEventListener('DOMContentLoaded', function () {
     var backgroundVideo = document.getElementById('backgroundVideo');
     window.addEventListener('scroll', function () {
         var yPos = window.scrollY;
@@ -11,6 +11,20 @@ document.addEventListener('DOMContentLoaded', function () {
         backgroundVideo.style.transform = 'translate3d(0, ' + yPos * speed + 'px, 0)';
     });
     
+    // Play the video when user interacts with the page
+    function playVideo() {
+        backgroundVideo.play();
+        // Remove the event listener to prevent multiple video plays
+        document.removeEventListener('touchstart', playVideo);
+        document.removeEventListener('click', playVideo);
+    }
+
+    // Add event listeners for touch and click events to trigger video playback
+    document.addEventListener('touchstart', playVideo);
+    document.addEventListener('click', playVideo);
+
+    // Autoplay the video when the page loads
+    backgroundVideo.play();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
