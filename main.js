@@ -10,8 +10,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         backgroundVideo.style.transform = 'translate3d(0, ' + yPos * speed + 'px, 0)';
     });
-    
+    playVideoOnLoad();
 });
+
+function playVideoOnLoad() {
+    var backgroundVideo = document.getElementById('backgroundVideo');
+    // Check if the video is paused
+    if (backgroundVideo.paused) {
+        // Attempt to play the video
+        backgroundVideo.play().then(function () {
+            // Video started playing successfully
+        }).catch(function (error) {
+            // Video playback failed, handle the error
+            console.error('Video playback failed:', error);
+        });
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     var backgroundVideo = document.getElementById('backgroundVideo');
