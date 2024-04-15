@@ -25,11 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Pause the video when the page is scrolled
-    window.addEventListener('scroll', function () {
-        backgroundVideo.pause();
-    });
-
     // Function to handle the scroll icon click
     var scrollIcon = document.getElementById('scroll-icon');
     scrollIcon.addEventListener('click', function(event) {
